@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 1em auto;
+  padding: 1em;
+  max-width: 800px;
+}
+
+label, input {
+  display: block;
+  margin: 5px 0;
+}
