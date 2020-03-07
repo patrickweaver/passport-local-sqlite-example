@@ -8,27 +8,25 @@ module.exports = async function() {
   
   const db = require('./init')();
   
-  if (admin_username && admin_password) {
-    const success = db.prepare(`
-      CREATE TABLE IF NOT EXISTS Users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT NOT NULL,
-        password_hash TEXT NOT NULL,
-        permissions TEXT NOT NULL
-      )
-    `).run();
-    if (success) {
-      console.log("New table Users created or exists!");
-    } else {
-      console.log("Error creating or accessing Users table.")
-    }
+  const success = db.prepare(`
+    CREATE TABLE IF NOT EXISTS Users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      username TEXT NOT NULL,
+      password_hash TEXT NOT NULL,
+      permissions TEXT NOT NULL
+    )
+  `).run();
+  if (success) {
+    console.log("New table Users created or exists!");
+  } else {
+    console.log("Error creating or accessing Users table.")
   }
   
   let users = db.prepare(`
     SELECT * FROM Users
   `).all();
   
-  if (users.length === 0) {
+  if (users.length === 0 && admin_username && admin_password) {
     const hashPassword = require('../server/passport/hashPassword');
     const admin_password_hash = await hashPassword(admin_password)
     db.prepare(`
