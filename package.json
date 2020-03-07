@@ -1,6 +1,6 @@
 {
   "name": "passport-local-sqlite-example",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Example authentication app with Passport and SQLite",
   "main": "server/main.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "node": "12.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-sqlite"
+    "url": "https://glitch.com/edit/#!/passport-local-sqlite-example"
   },
   "license": "MIT"
 }
