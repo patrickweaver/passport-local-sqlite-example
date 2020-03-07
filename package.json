@@ -1,0 +1,27 @@
+{
+  "name": "passport-local-example",
+  "version": "1.0.0",
+  "description": "Example authentication app with Passport",
+  "main": "server/main.js",
+  "scripts": {
+    "start": "node server/main.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "better-sqlite3": "^6.0.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "connect-ensure-login": "^0.1.1",
+    "bcrypt": "^4.0.1",
+    "pug": "^2.0.4",
+    "express-session": "^1.16.1"
+    
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-sqlite"
+  },
+  "license": "MIT"
+}

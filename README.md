@@ -1,2 +1,1 @@
-# passport-local-sqlite-example
-Example authentication app with Passport
+# Passport Local Example
