@@ -1,1 +1,1 @@
-# Passport Local Example
+# Passport Local SQLite Example
