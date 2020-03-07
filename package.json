@@ -1,7 +1,7 @@
 {
-  "name": "passport-local-example",
-  "version": "1.0.0",
-  "description": "Example authentication app with Passport",
+  "name": "passport-local-sqlite-example",
+  "version": "1.0.1",
+  "description": "Example authentication app with Passport and SQLite",
   "main": "server/main.js",
   "scripts": {
     "start": "node server/main.js"
